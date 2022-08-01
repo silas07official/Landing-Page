@@ -1,0 +1,134 @@
+/* reset */
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* colors */
+  --raisin-black-2: hsl(245, 16%, 16%);
+  --raisin-black-1: hsl(244, 17%, 19%);
+  --majorelle-blue: hsl(245, 67%, 59%);
+  --ghost-white-1: hsl(240, 100%, 99%);
+  --ghost-white-2: hsl(228, 50%, 96%);
+  --white-opacity: hsla(0, 0%, 100%, 0.5);
+  --independence: hsl(245, 17%, 27%);
+  --lavender-web: hsl(247, 69%, 95%);
+  --eerie-black: hsl(210, 11%, 15%);
+  --cool-gray: hsl(244, 17%, 61%);
+  --sapphire: hsl(211, 100%, 35%);
+  --white: hsl(0, 0%, 100%);
+
+  /* Typography */
+  --ff-quicksand: "Quicksand", sans-serif;
+  --ff-mulish: "Mulish", sans-serif;
+  /* font sizes */
+  --fs-1: 36px;
+  --fs-2: 28px;
+  --fs-3: 20px;
+  --fs-4: 17px;
+  --fs-5: 16px;
+  --fs-6: 15px;
+  --fs-7: 14px;
+  /* font weights */
+  --fw-500: 500;
+  --fw-600: 600;
+  --fw-700: 700;
+  /* transition */
+  --transition: 0.25s ease;
+  /* section padding */
+  --section-padding: 80px;
+}
+/* global styles */
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+a,
+img,
+span,
+input,
+label,
+button,
+ion-icon,
+textarea {
+  display: block;
+}
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font: inherit;
+}
+input,
+textarea {
+  border: none;
+  font: inherit;
+  width: 100%;
+}
+html {
+  font-family: var(--ff-quicksand);
+  scroll-behavior: smooth;
+}
+body {
+  background: var(--white);
+}
+/* reused styles */
+.container {
+  padding-inline: 15px;
+}
+/* header */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--white);
+  padding-block: 20px;
+  box-shadow: 0 1px 2px hsla(0, 0%, 0%, 0.05);
+  height: 62px;
+  overflow: hidden;
+  transition: 0.5 ease-in-out;
+  z-index: 4;
+}
+.header.active {
+  height: 330px;
+}
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu-toggle-btn {
+  font-size: 25px;
+  cursor: pointer;
+}
+.navbar {
+  position: absolute;
+  width: 100%;
+  top: 62px;
+  left: 0;
+  padding-inline: 30px;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s ease-in-out;
+}
+.header.active .navbar {
+  visibility: visible;
+  opacity: 1;
+}
+.navbar .navbar-link,
+.header-action-link {
+  color: var(--cool-gray);
+  font-size: var(--fs-6);
+  font-family: var(--ff-mulish);
+  padding-block: 8px;
+}
+:is(.nav-link, .header-action-link):is(:hover, :focus){
+  color: var(--majorelle-blue);
+}
