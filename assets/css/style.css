@@ -402,7 +402,7 @@ h3 {
   object-fit: cover;
   border-radius: 4px;
 }
-.blog-meta{
+.blog-meta {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -412,29 +412,103 @@ h3 {
   color: var(--cool-gray);
   margin-bottom: 10px;
 }
-.blog-meta span{
+.blog-meta span {
   display: flex;
   align-items: center;
   gap: 5px;
 }
-.blog-title{
+.blog-title {
   font-size: var(--fs-3);
   color: var(--independence);
   margin-bottom: 5px;
 }
-.blog-text{
-color: var(--cool-gray);
-font-size: var(--fs-6);
-line-height: 1.7;
-margin-bottom: 15px;
+.blog-text {
+  color: var(--cool-gray);
+  font-size: var(--fs-6);
+  line-height: 1.7;
+  margin-bottom: 15px;
 }
-.blog-link-btn{
+.blog-link-btn {
   display: flex;
   align-items: center;
   gap: 5px;
   color: var(--majorelle-blue);
   font-weight: var(--fw-600);
 }
-.blog-link-btn:is(:hover, :focus){
+.blog-link-btn:is(:hover, :focus) {
   color: var(--sapphire);
+}
+/* contact */
+.contact {
+  padding-block: var(--section-padding);
+  background: var(--ghost-white-1);
+}
+.contact .section-title {
+  margin-bottom: 15px;
+}
+.contact .section-text {
+  margin-bottom: 60px;
+}
+.contact-form {
+  margin-bottom: 50px;
+}
+.input-wrapper {
+  margin-bottom: 20px;
+}
+.contact label {
+  color: var(--independence);
+  font-weight: var(--fw-500);
+  margin-bottom: 10px;
+}
+.contact .input-field {
+  background: transparent;
+  color: var(--independence);
+  font-size: var(--fs-7);
+  padding: 10px 15px;
+  border: 1px solid hsla(244, 17%, 67%, 0.3);
+  border-radius: 4px;
+}
+.contact .input:focus {
+  border: none;
+  background: var(--ghost-white-2);
+}
+.contact .input-field::placeholder {
+  color: var(--cool-gray);
+}
+textarea.input-field {
+  margin-bottom: 20px;
+  resize: vertical;
+  min-height: 50px;
+  height: 100px;
+  max-height: 200px;
+}
+.contact .btn-primary {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.contact .btn-primary ion-icon {
+  --ionicon-stroke-width: 40px;
+}
+.contact-list li:not(:last-child) {
+  margin-bottom: 25px;
+}
+.contact-link {
+  color: var(--cool-gray);
+  font-weight: var(--fw-500);
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 5px;
+}
+.contact ion-icon {
+  font-size: 20px;
+  --ionicon-stroke-width: 30px;
+}
+.contact-link :is(span, address) {
+  width: calc(100%-25px);
+}
+.contact-link address{
+  font-style: normal;
 }
