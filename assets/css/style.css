@@ -48,6 +48,7 @@ li {
 }
 a {
   text-decoration: none;
+  color: var(--cool-gray);
 }
 a,
 img,
@@ -186,10 +187,9 @@ h3 {
   padding-block: 8px;
 }
 
-:is(.nav-link, .header-action-link):is(:hover, :focus) {
+:is(.navbar-link a, .header-action-link):is(:hover, :focus) {
   color: var(--majorelle-blue);
 }
-/* Hero */
 .hero {
   background: var(--ghost-white-1);
   padding: 124px 0 var(--section-padding);
