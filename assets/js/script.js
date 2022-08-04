@@ -1,8 +1,8 @@
 "use strict";
 // navbar variables
-const navToggleBtn = document.querySelector("[data-nav-toggle-btn]");
+const navToggleBtn = document.querySelector("menu-toggle-btn");
 const header = document.querySelector("[data-header]");
 // add eventlistener
-header.addEventListener("click", function () {
+navToggleBtn.addEventListener("click", function () {
   header.classList.toggle("active");
 });
